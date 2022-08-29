@@ -23,6 +23,32 @@ namespace MatchingGame2022
         public MainWindow()
         {
             InitializeComponent();
+
+            SetUpGame();
+        }
+
+        private void SetUpGame()
+        {
+            List<string> animalEmoji = new List<string>()
+            {
+                "🐇","🐇",
+                "🦁","🦁",
+                "🚒","🚒",
+                "🐔","🐔",
+                "😀","😀",
+                "😋","😋",
+                "🐌","🐌",
+                "🐶","🐶"
+            };
+
+            Random random = new Random();
+            int index = 0;
+            foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
+            {
+                index = random.Next(animalEmoji.Count);
+                textBlock.Text = animalEmoji[index];
+                animalEmoji.RemoveAt(index);
+            }
         }
     }
 }

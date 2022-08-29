@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MatchingGame2022"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="400">
-    <Grid>
+    <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
